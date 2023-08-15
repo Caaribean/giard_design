@@ -89,6 +89,16 @@
     line-height: 150%;
 }
 
+@mixin text-white {
+    font-family: v.$inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: -0.14px;
+color: var(--grey, #F5F0EC);
+}
+
 
 @mixin card-title {
     font-family: v.$montserrat;

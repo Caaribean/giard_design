@@ -2,6 +2,7 @@
 @use "extras-paddings-margins.scss";
 @use "mixins.scss" as m;
 @use "variables.scss" as v;
+@use "icons.scss";
 
 * {
     color: v.$black;
@@ -36,7 +37,6 @@
 
 .title {
     @include m.title;
-    color: pink; 
 
     &--italic {
         @include m.title-italic;
@@ -86,9 +86,72 @@
 }
 
 .header {
-
     .nav-link {
         @include m.card-text;
+    }
+    .dropdown-toggle::after {
+        position: absolute;
+        font-family: 'icomoon';
+        border: none;
+        content: "\e901";
+    }
+    .search-box {
+        border: 1px solid transparent;
+        &.open {
+            border-radius: 200px;
+            border: 1px solid v.$green;
+        }
+        .search-btn {
+            background: transparent;
+            border: none;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            &::after {
+                font-family: 'icomoon';
+                border: none;
+                content: "\e905";
+                font-size: 24px;
+            }
+        }
+
+        .search-input {
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: v.$black;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+
+            &.open {
+                width: 240px;
+                padding: 0 6px;
+            }
+
+        }
+    }
+}
+
+.section-main {
+    height: 720px;
+    background-color: var(--beige, #DCC1AB);
+
+    &__content {
+        padding: 50px;
+    }
+
+    &__img {
+        background-image: url('../img/garden.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -144,4 +207,18 @@
             width: 20%;
         }
     }
+} 
+
+.footer {
+    background-color: black;
+    padding: 80px 256px; 
+
+    &__info {
+        border-bottom: 1px solid white;
+        padding-bottom: 62px;
+    }
+
+    &__text {
+        @include m.text-white;
+    } 
 }
