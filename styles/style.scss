@@ -1,0 +1,147 @@
+@use "reset.scss";
+@use "extras-paddings-margins.scss";
+@use "mixins.scss" as m;
+@use "variables.scss" as v;
+
+* {
+    color: v.$black;
+}
+
+.page-x-space {
+    padding: 0 89px;
+}
+
+
+
+.btn {
+    &--primary {
+        @include m.btn-primary;
+
+        &--grey {
+            @include m.btn-secondary;
+            background-color: v.$grey;
+        }
+    }
+
+    &--secondary {
+        @include m.btn-secondary;
+
+        &--grey {
+            @include m.btn-secondary;
+            border: 1px solid v.$grey;
+            color: v.$grey;
+        }
+    }
+}
+
+.title {
+    @include m.title;
+    color: pink; 
+
+    &--italic {
+        @include m.title-italic;
+    }
+
+    &--medium {
+        @include m.medium-title;
+
+        &--italic {
+            @include m.medium-title-italic;
+        }
+    }
+}
+
+.text {
+    @include m.text;
+
+    &--grey {
+        @include m.text;
+        color: v.$grey;
+    }
+}
+
+.navi-small {
+    @include m.navi-small;
+
+    &--grey {
+        @include m.navi-small;
+        color: v.$grey;
+    }
+}
+
+.card {
+    &__content-box {
+        &__icon {
+            //todo
+        }
+
+        &__title {
+            @include m.card-title;
+        }
+
+        &__text {
+            @include m.card-text;
+        }
+    }
+}
+
+.header {
+
+    .nav-link {
+        @include m.card-text;
+    }
+}
+
+.about {
+    height: 720px;
+    background-color: v.$green;
+
+    &__photo {
+        background-image: url('../img/japan_garden.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__content {
+
+
+        .navi-small,
+        .title,
+        .title--italic,
+        .text {
+            color: v.$grey;
+        }
+
+        .title {
+            max-width: 250px;
+        }
+
+        .text {
+            margin-bottom: 72px;
+        }
+
+        padding-left: 96px;
+    }
+}
+
+.projects {
+    &__header {
+        margin-top: 120px;
+        margin-bottom: 96px;
+        padding-left: 160px;
+    }
+}
+
+.instagram {
+    background-color: red;
+
+    &__content {
+        padding: 120px 110px;
+        background-color: v.$green;
+
+        &__btn-section {
+            width: 20%;
+        }
+    }
+}
