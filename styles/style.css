@@ -168,7 +168,15 @@ table {
   margin-top: 60px !important;
 }
 
+.mt-70 {
+  margin-top: 70px !important;
+}
+
 .mt-80 {
+  margin-top: 80px !important;
+}
+
+.mt-90 {
   margin-top: 80px !important;
 }
 
@@ -222,6 +230,10 @@ table {
 
 .pt-80 {
   padding-top: 80px !important;
+}
+
+.pt-120 {
+  padding-top: 120px !important;
 }
 
 .pb-40 {
@@ -431,6 +443,11 @@ table {
   color: #F5F0EC;
 }
 
+.card__content-box {
+  /* &__icon {
+      //todo
+  } */
+}
 .card__content-box__title {
   font-family: "Montserrat", sans-serif;
   font-size: 28px;
@@ -502,12 +519,62 @@ table {
   padding: 0 6px;
 }
 
+.big-wrapper {
+  background: var(--grey, #F5F0EC);
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+.section {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.section .text {
+  max-width: 709px;
+}
+
+.wrapper {
+  padding: 0 88px;
+  display: flex;
+}
+.wrapper .gap {
+  gap: 96px;
+}
+.wrapper .card {
+  padding: 48px 40px;
+  color: white;
+  max-width: 378px;
+  border: none;
+  border-radius: 28px;
+}
+.wrapper .card__content-box__icon {
+  width: 40px;
+  height: 40px;
+}
+.wrapper .card__content-box__link {
+  color: var(--green, #1B5B31);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
 .section-main {
   height: 720px;
   background-color: var(--beige, #DCC1AB);
 }
 .section-main__content {
-  padding: 50px;
+  padding: 64px;
+}
+.section-main__content .text {
+  max-width: 490px;
+  margin-bottom: 70px;
+}
+.section-main__content .buttons {
+  display: flex;
+  gap: 36px;
 }
 .section-main__img {
   background-image: url("../img/garden.png");

@@ -91,12 +91,22 @@
 
 @mixin text-white {
     font-family: v.$inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%;
-letter-spacing: -0.14px;
-color: var(--grey, #F5F0EC);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.14px;
+    color: var(--grey, #F5F0EC);
+}
+
+@mixin text-green {
+    color: var(--green, #1B5B31);
+    text-align: center;
+    font-family: v.$inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%
 }
 
 

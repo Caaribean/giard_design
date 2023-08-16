@@ -71,9 +71,9 @@
 
 .card {
     &__content-box {
-        &__icon {
+        /* &__icon {
             //todo
-        }
+        } */
 
         &__title {
             @include m.card-title;
@@ -89,18 +89,22 @@
     .nav-link {
         @include m.card-text;
     }
+
     .dropdown-toggle::after {
         position: absolute;
         font-family: 'icomoon';
         border: none;
         content: "\e901";
     }
+
     .search-box {
         border: 1px solid transparent;
+
         &.open {
             border-radius: 200px;
             border: 1px solid v.$green;
         }
+
         .search-btn {
             background: transparent;
             border: none;
@@ -110,6 +114,7 @@
             justify-content: center;
             align-items: center;
             transition: 0.4s;
+
             &::after {
                 font-family: 'icomoon';
                 border: none;
@@ -139,12 +144,65 @@
     }
 }
 
+.big-wrapper {
+    background: var(--grey, #F5F0EC);
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+
+.section {
+    max-width: 1040px;
+    margin: 0 auto;
+
+    .text {
+        max-width: 709px;
+    }
+}
+
+.wrapper {
+    padding: 0 88px;
+    display: flex;
+
+    .gap {
+        gap: 96px;
+    }
+
+    .card {
+        padding: 48px 40px;
+        color: white;
+        max-width: 378px;
+        border: none;
+        border-radius: 28px;
+
+        &__content-box {
+            &__icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            &__link {
+                @include m.text-green;
+            }
+        }
+    }
+}
+
 .section-main {
     height: 720px;
     background-color: var(--beige, #DCC1AB);
 
     &__content {
-        padding: 50px;
+        padding: 64px;
+
+        .text {
+            max-width: 490px;
+            margin-bottom: 70px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 36px;
+        }
     }
 
     &__img {
@@ -207,11 +265,11 @@
             width: 20%;
         }
     }
-} 
+}
 
 .footer {
     background-color: black;
-    padding: 80px 256px; 
+    padding: 80px 256px;
 
     &__info {
         border-bottom: 1px solid white;
@@ -220,5 +278,5 @@
 
     &__text {
         @include m.text-white;
-    } 
+    }
 }
