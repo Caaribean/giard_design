@@ -3,13 +3,14 @@
 @use "mixins.scss" as m;
 @use "variables.scss" as v;
 @use "icons.scss";
+@use "functions.scss" as f;
 
 * {
     color: v.$black;
 }
 
 .page-x-space {
-    padding: 0 89px;
+    padding: 0 f.calculateRem(89px);
 }
 
 .btn {
@@ -28,7 +29,7 @@
 
         &--grey {
             @include m.btn-secondary;
-            border: 1px solid v.$grey;
+            border: f.calculateRem(1px) solid v.$grey;
             color: v.$grey;
 
             &:hover {
@@ -95,18 +96,18 @@
     }
 
     .search-box {
-        border: 1px solid transparent;
+        border: f.calculateRem(1px) solid transparent;
 
         &.open {
-            border-radius: 200px;
-            border: 1px solid v.$green;
+            border-radius: f.calculateRem(200px);
+            border: f.calculateRem(1px) solid v.$green;
         }
 
         .search-btn {
             background: transparent;
             border: none;
-            width: 24px;
-            height: 24px;
+            width: f.calculateRem(24px);
+            height: f.calculateRem(24px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -116,7 +117,7 @@
                 font-family: 'icomoon';
                 border: none;
                 content: "\e905";
-                font-size: 24px;
+                font-size: f.calculateRem(24px);
             }
         }
 
@@ -127,14 +128,14 @@
             float: left;
             padding: 0;
             color: v.$black;
-            font-size: 16px;
+            font-size: f.calculateRem(16px);
             transition: 0.4s;
-            line-height: 40px;
-            width: 0px;
+            line-height: f.calculateRem(40px);
+            width: f.calculateRem(0px);
 
             &.open {
-                width: 240px;
-                padding: 0 6px;
+                width: f.calculateRem(240px);
+                padding: 0 f.calculateRem(6px);
             }
 
         }
@@ -143,32 +144,32 @@
 
 .big-wrapper {
     background: v.$grey;
-    padding-top: 120px;
-    padding-bottom: 160px;
+    padding-top: f.calculateRem(120px);
+    padding-bottom: f.calculateRem(160px);
 }
 
 .section {
-    max-width: 1040px;
+    max-width: f.calculateRem(1040px);
     margin: 0 auto;
 
     .text {
-        max-width: 709px;
+        max-width: f.calculateRem(709px);
     }
 }
 
 .wrapper {
-    padding: 0 88px;
+    padding: 0 f.calculateRem(88px);
     display: flex;
 
     .gap {
-        gap: 96px;
+        gap: f.calculateRem(96px);
     }
 
     .card {
-        padding: 48px 40px;
-        max-width: 378px;
+        padding: f.calculateRem(48px) f.calculateRem(40px);
+        max-width: f.calculateRem(378px);
         border: none;
-        border-radius: 28px;
+        border-radius: f.calculateRem(28px);
         transition: 0.5s;
 
         &:hover {
@@ -186,15 +187,15 @@
             }
 
             &__icon {
-                width: 40px;
-                height: 40px;
+                width: f.calculateRem(40px);
+                height: f.calculateRem(40px);
             }
 
             &__link {
                 cursor: pointer;
                 text-decoration: none;
                 text-align: left;
-                border-bottom: 1px solid v.$green;
+                border-bottom: f.calculateRem(1px) solid v.$green;
                 width: fit-content;
 
                 &__text {
@@ -202,7 +203,7 @@
                 }
 
                 .icon-arrow-btn-right {
-                    margin-left: 8px;
+                    margin-left: f.calculateRem(8px);
                 }
             }
         }
@@ -210,20 +211,20 @@
 }
 
 .section-main {
-    height: 720px;
+    height: f.calculateRem(720px);
     background-color: v.$beige;
 
     &__content {
-        padding: 64px;
+        padding: f.calculateRem(64px);
 
         .text {
-            max-width: 490px;
-            margin-bottom: 70px;
+            max-width: f.calculateRem(490px);
+            margin-bottom: f.calculateRem(70px);
         }
 
         .buttons {
             display: flex;
-            gap: 36px;
+            gap: f.calculateRem(36px);
         }
     }
 
@@ -233,10 +234,25 @@
         object-fit: cover;
         overflow: hidden;
     }
+
+    .carousel {
+        position: relative;
+    }
+
+    .carousel-control-prev {
+        position: absolute;
+        top: 600;
+        left: 600;
+    }
+
+    .carousel-control-next {
+        position: absolute;
+        top: 600;
+    }
 }
 
 .about {
-    height: 720px;
+    height: f.calculateRem(720px);
     background-color: v.$green;
 
     &__photo {
@@ -256,14 +272,14 @@
         }
 
         .title {
-            max-width: 250px;
+            max-width: f.calculateRem(250px);
         }
 
         .text {
-            margin-bottom: 72px;
+            margin-bottom: f.calculateRem(72px);
         }
 
-        padding-left: 96px;
+        padding-left: f.calculateRem(96px);
     }
 }
 
@@ -271,16 +287,16 @@
     background-color: v.$beige;
 
     &__header {
-        padding-top: 120px;
-        padding-bottom: 96px;
-        padding-left: 160px;
+        padding-top: f.calculateRem(120px);
+        padding-bottom: f.calculateRem(96px);
+        padding-left: f.calculateRem(160px);
     }
 }
 
 .instagram {
 
     &__content {
-        padding: 120px 110px;
+        padding: f.calculateRem(120px) f.calculateRem(110px);
         background-color: v.$green;
 
         &__btn-section {
@@ -291,11 +307,11 @@
 
 .footer {
     background-color: v.$black;
-    padding: 80px 256px;
+    padding: f.calculateRem(80px) f.calculateRem(256px);
 
     &__info {
-        border-bottom: 1px solid v.$grey;
-        padding-bottom: 62px;
+        border-bottom: f.calculateRem(1px) solid v.$grey;
+        padding-bottom: f.calculateRem(62px);
     }
 
     &__text {
@@ -303,16 +319,16 @@
     }
 
     &__media {
-        gap: 48px;
+        gap: f.calculateRem(48px);
     }
 
     &__contact {
-        gap: 48px;
+        gap: f.calculateRem(48px);
     }
 
     &__logo {
-        width: 113px;
-        height: 23px;
+        width: f.calculateRem(113px);
+        height: f.calculateRem(23px);
     }
 }
 
@@ -320,7 +336,7 @@
     margin: 0 auto;
 
     .grid-item {
-        margin-bottom: 10px;
+        margin-bottom: f.calculateRem(10px);
 
         img {
             width: 100%;

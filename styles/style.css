@@ -615,6 +615,18 @@ table {
      object-fit: cover;
   overflow: hidden;
 }
+.section-main .carousel {
+  position: relative;
+}
+.section-main .carousel-control-prev {
+  position: absolute;
+  top: 600;
+  left: 600;
+}
+.section-main .carousel-control-next {
+  position: absolute;
+  top: 600;
+}
 
 .about {
   height: 720px;

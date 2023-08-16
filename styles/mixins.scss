@@ -1,34 +1,35 @@
 @use "variables.scss" as v;
+@use "functions.scss" as f;
 
 //
 //BREAKPOINTS
 //
 @mixin xs {
-    @media (max-width: 767px) {
+    @media (max-width: f.calculateRem(767px)) {
         @content;
     }
 }
 
 @mixin sm {
-    @media (min-width: 768px) {
+    @media (min-width: f.calculateRem(768px)) {
         @content;
     }
 }
 
 @mixin md {
-    @media (min-width: 1152px) {
+    @media (min-width: f.calculateRem(1152px)) {
         @content;
     }
 }
 
 @mixin lg {
-    @media (min-width: 1440px) {
+    @media (min-width: f.calculateRem(1400px)) {
         @content;
     }
 }
 
 @mixin xl {
-    @media (min-width: 1920px) {
+    @media (min-width: f.calculateRem(1920px)) {
         @content;
     }
 }
@@ -37,24 +38,24 @@
 
 @mixin headline {
     font-family: v.$montserrat;
-    font-size: 60px;
+    font-size: f.calculateRem(60px);
     font-style: normal;
     font-weight: 500;
-    line-height: 70px;
+    line-height: f.calculateRem(70px);
 }
 
 @mixin title {
     font-family: v.$montserrat;
-    font-size: 48px;
+    font-size: f.calculateRem(48px);
     font-style: normal;
     font-weight: 500;
     line-height: 115%;
-    letter-spacing: -1.44px;
+    letter-spacing: f.calculateRem(-1.44px);
 }
 
 @mixin title-italic {
     font-family: v.$inter;
-    font-size: 48px;
+    font-size: f.calculateRem(48px);
     font-style: italic;
     font-weight: 500;
     line-height: 115%;
@@ -63,27 +64,27 @@
 @mixin medium-title {
     color: v.$grey;
     font-family: v.$montserrat;
-    font-size: 40px;
+    font-size: f.calculateRem(40px);
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    letter-spacing: -2px;
+    letter-spacing: f.calculateRem(-2px);
 }
 
 @mixin medium-title-italic {
     color: v.$grey;
     font-family: v.$inter;
-    font-size: 40px;
+    font-size: f.calculateRem(40px);
     font-style: italic;
     font-weight: 500;
     line-height: 120%;
-    letter-spacing: 1px;
+    letter-spacing: f.calculateRem(1px);
 }
 
 
 @mixin text {
     font-family: v.$inter;
-    font-size: 16px;
+    font-size: f.calculateRem(16px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -91,11 +92,11 @@
 
 @mixin text-white {
     font-family: v.$inter;
-    font-size: 14px;
+    font-size: f.calculateRem(14px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: -0.14px;
+    letter-spacing: f.calculateRem(-0.14px);
     color: v.$grey;
 }
 
@@ -103,7 +104,7 @@
     color: v.$green;
     text-align: center;
     font-family: v.$inter;
-    font-size: 16px;
+    font-size: f.calculateRem(16px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%
@@ -112,26 +113,26 @@
 
 @mixin card-title {
     font-family: v.$montserrat;
-    font-size: 28px;
+    font-size: f.calculateRem(28px);
     font-style: normal;
     font-weight: 500;
     line-height: 115%;
-    letter-spacing: -1.4px;
+    letter-spacing: f.calculateRem(-1.4px);
 }
 
 @mixin card-text {
     font-family: v.$inter;
-    font-size: 14px;
+    font-size: f.calculateRem(14px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: -0.14px;
+    letter-spacing: f.calculateRem(-0.14px);
 }
 
 @mixin card-link {
     color: v.$green;
     font-family: v.$inter;
-    font-size: 16px;
+    font-size: f.calculateRem(16px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -140,23 +141,23 @@
 @mixin navi-small {
     color: v.$green;
     font-family: v.$inter;
-    font-size: 12px;
+    font-size: f.calculateRem(12px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    letter-spacing: -0.12px;
+    letter-spacing: f.calculateRem(-0.12px);
 }
 
 @mixin btn-primary {
     cursor: pointer;
     transition: 0.5s;
-    border-radius: 200px;
-    padding: 12px 24px 14px 24px;
+    border-radius: f.calculateRem(200px);
+    padding: f.calculateRem(12px) f.calculateRem(24px) f.calculateRem(14px) f.calculateRem(24px);
     background: v.$green;
     color: v.$grey;
     text-align: center;
     font-family: v.$inter;
-    font-size: 16px;
+    font-size: f.calculateRem(16px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -170,13 +171,13 @@
 @mixin btn-secondary {
     cursor: pointer;
     transition: 0.5s;
-    border-radius: 200px;
-    border: 1px solid v.$green;
-    padding: 12px 22px 14px 22px;
+    border-radius: f.calculateRem(200px);
+    border: f.calculateRem(1px) solid v.$green;
+    padding: f.calculateRem(12px) f.calculateRem(22px) f.calculateRem(14px) f.calculateRem(22px);
     color: v.$green;
     text-align: center;
     font-family: v.$inter;
-    font-size: 16px;
+    font-size: f.calculateRem(16px);
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -187,6 +188,6 @@
     }
 
     .icon {
-        margin-left: 8px;
+        margin-left: f.calculateRem(8px);
     }
 }
