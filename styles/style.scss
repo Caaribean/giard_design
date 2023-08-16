@@ -3,7 +3,7 @@
 @use "mixins.scss" as m;
 @use "variables.scss" as v;
 @use "icons.scss";
-@use "functions.scss" as f;
+@use "function.scss" as f;
 
 * {
     color: v.$black;
@@ -146,6 +146,8 @@
     background: v.$grey;
     padding-top: f.calculateRem(120px);
     padding-bottom: f.calculateRem(160px);
+
+    @include m.md {}
 }
 
 .section {
@@ -153,7 +155,11 @@
     margin: 0 auto;
 
     .text {
-        max-width: f.calculateRem(709px);
+        max-width: f.calculateRem(500px);
+
+        @include m.md {
+            max-width: f.calculateRem(709px);
+        }
     }
 }
 
@@ -162,15 +168,23 @@
     display: flex;
 
     .gap {
-        gap: f.calculateRem(96px);
+        gap: f.calculateRem(20px);
+
+        @include m.md {
+            gap: f.calculateRem(96px);
+        }
     }
 
     .card {
-        padding: f.calculateRem(48px) f.calculateRem(40px);
-        max-width: f.calculateRem(378px);
+        padding: f.calculateRem(28px) f.calculateRem(20px);
         border: none;
         border-radius: f.calculateRem(28px);
         transition: 0.5s;
+
+        @include m.md {
+            padding: f.calculateRem(48px) f.calculateRem(40px);
+            max-width: f.calculateRem(378px);
+        }
 
         &:hover {
             box-shadow: v.$card-shadow;
@@ -215,11 +229,18 @@
     background-color: v.$beige;
 
     &__content {
-        padding: f.calculateRem(64px);
+        padding: f.calculateRem(34px);
+
+        @include m.md {
+            padding: f.calculateRem(64px);
+        }
 
         .text {
-            max-width: f.calculateRem(490px);
             margin-bottom: f.calculateRem(70px);
+
+            @include m.md {
+                max-width: f.calculateRem(490px);
+            }
         }
 
         .buttons {
@@ -242,12 +263,21 @@
     .carousel-control-prev {
         position: absolute;
         top: 600;
-        left: 600;
+        left: 250;
+
+        @include m.lg {
+            left: 500;
+        }
     }
 
     .carousel-control-next {
         position: absolute;
         top: 600;
+        left: 300;
+
+        @include m.lg {
+            left: 600;
+        }
     }
 }
 
@@ -296,22 +326,40 @@
 .instagram {
 
     &__content {
-        padding: f.calculateRem(120px) f.calculateRem(110px);
+        padding: f.calculateRem(80px) f.calculateRem(70px);
         background-color: v.$green;
 
+        @include m.md {
+            padding: f.calculateRem(120px) f.calculateRem(110px);
+        }
+
         &__btn-section {
-            width: 20%;
+            width: 100%;
+
+            @include m.md {
+                width: 20%;
+            }
+
         }
     }
 }
 
 .footer {
     background-color: v.$black;
-    padding: f.calculateRem(80px) f.calculateRem(256px);
+    padding: f.calculateRem(80px) f.calculateRem(100px);
+
+    @include m.md {
+        padding: f.calculateRem(80px) f.calculateRem(256px);
+    }
 
     &__info {
         border-bottom: f.calculateRem(1px) solid v.$grey;
         padding-bottom: f.calculateRem(62px);
+        gap: f.calculateRem(20px);
+
+        @include m.md {
+            gap: 0;
+        }
     }
 
     &__text {
@@ -319,11 +367,19 @@
     }
 
     &__media {
-        gap: f.calculateRem(48px);
+        gap: f.calculateRem(28px);
+
+        @include m.md {
+            gap: f.calculateRem(48px);
+        }
     }
 
     &__contact {
-        gap: f.calculateRem(48px);
+        gap: f.calculateRem(28px);
+
+        @include m.md {
+            gap: f.calculateRem(48px);
+        }
     }
 
     &__logo {
