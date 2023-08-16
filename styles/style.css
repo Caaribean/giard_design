@@ -443,28 +443,6 @@ table {
   color: #F5F0EC;
 }
 
-.card__content-box {
-  /* &__icon {
-      //todo
-  } */
-}
-.card__content-box__title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 115%;
-  letter-spacing: -1.4px;
-}
-.card__content-box__text {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: -0.14px;
-}
-
 .header .nav-link {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -547,6 +525,22 @@ table {
   border: none;
   border-radius: 28px;
 }
+.wrapper .card__content-box__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -1.4px;
+}
+.wrapper .card__content-box__text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.14px;
+}
 .wrapper .card__content-box__icon {
   width: 40px;
   height: 40px;
@@ -559,6 +553,9 @@ table {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  text-decoration: none;
+  text-align: left;
+  border-bottom: 1px solid var(--green, #1B5B31);
 }
 
 .section-main {
@@ -616,7 +613,7 @@ table {
 }
 
 .instagram {
-  background-color: red;
+  background-color: white;
 }
 .instagram__content {
   padding: 120px 110px;
@@ -642,4 +639,14 @@ table {
   line-height: 150%;
   letter-spacing: -0.14px;
   color: var(--grey, #F5F0EC);
+}
+.footer__media {
+  gap: 48px;
+}
+.footer__contact {
+  gap: 48px;
+}
+.footer__logo {
+  width: 113px;
+  height: 23px;
 }/*# sourceMappingURL=style.css.map */

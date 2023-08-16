@@ -69,22 +69,6 @@
     }
 }
 
-.card {
-    &__content-box {
-        /* &__icon {
-            //todo
-        } */
-
-        &__title {
-            @include m.card-title;
-        }
-
-        &__text {
-            @include m.card-text;
-        }
-    }
-}
-
 .header {
     .nav-link {
         @include m.card-text;
@@ -175,6 +159,15 @@
         border-radius: 28px;
 
         &__content-box {
+
+            &__title {
+                @include m.card-title;
+            }
+
+            &__text {
+                @include m.card-text;
+            }
+
             &__icon {
                 width: 40px;
                 height: 40px;
@@ -182,6 +175,9 @@
 
             &__link {
                 @include m.text-green;
+                text-decoration: none;
+                text-align: left;
+                border-bottom: 1px solid var(--green, #1B5B31);
             }
         }
     }
@@ -255,7 +251,7 @@
 }
 
 .instagram {
-    background-color: red;
+    background-color: white;
 
     &__content {
         padding: 120px 110px;
@@ -278,5 +274,18 @@
 
     &__text {
         @include m.text-white;
+    }
+
+    &__media {
+        gap: 48px;
+    }
+
+    &__contact {
+        gap: 48px;
+    }
+
+    &__logo {
+        width: 113px;
+        height: 23px;
     }
 }
