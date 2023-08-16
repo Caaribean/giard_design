@@ -289,3 +289,20 @@
         height: 23px;
     }
 }
+
+.grid {
+    margin: 0 auto;
+
+    .grid-item {
+        margin-bottom: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .grid-sizer,
+    .grid-item {
+        width: 30%;
+    }
+}

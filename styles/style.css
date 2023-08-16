@@ -649,4 +649,18 @@ table {
 .footer__logo {
   width: 113px;
   height: 23px;
+}
+
+.grid {
+  margin: 0 auto;
+}
+.grid .grid-item {
+  margin-bottom: 10px;
+}
+.grid .grid-item img {
+  width: 100%;
+}
+.grid .grid-sizer,
+.grid .grid-item {
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */
