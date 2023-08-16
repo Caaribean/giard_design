@@ -303,6 +303,7 @@ table {
 
 .btn--primary {
   cursor: pointer;
+  transition: 0.5s;
   border-radius: 200px;
   padding: 12px 24px 14px 24px;
   background: #1B5B31;
@@ -316,28 +317,31 @@ table {
   border: none;
 }
 .btn--primary:hover {
-  transition: 0.5s;
+  opacity: 0.8;
 }
 .btn--primary--grey {
   cursor: pointer;
+  transition: 0.5s;
   border-radius: 200px;
-  border: 1px solid #1B5B31;
-  padding: 12px 22px 14px 22px;
-  color: #1B5B31;
+  padding: 12px 24px 14px 24px;
+  background: #1B5B31;
+  color: #F5F0EC;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  background: transparent;
+  border: none;
   background-color: #F5F0EC;
+  color: #1B5B31;
 }
 .btn--primary--grey:hover {
-  transition: 0.5s;
+  opacity: 0.8;
 }
 .btn--secondary {
   cursor: pointer;
+  transition: 0.5s;
   border-radius: 200px;
   border: 1px solid #1B5B31;
   padding: 12px 22px 14px 22px;
@@ -351,10 +355,14 @@ table {
   background: transparent;
 }
 .btn--secondary:hover {
-  transition: 0.5s;
+  background-color: rgba(27, 91, 49, 0.2);
+}
+.btn--secondary .icon {
+  margin-left: 8px;
 }
 .btn--secondary--grey {
   cursor: pointer;
+  transition: 0.5s;
   border-radius: 200px;
   border: 1px solid #1B5B31;
   padding: 12px 22px 14px 22px;
@@ -370,7 +378,16 @@ table {
   color: #F5F0EC;
 }
 .btn--secondary--grey:hover {
-  transition: 0.5s;
+  background-color: rgba(27, 91, 49, 0.2);
+}
+.btn--secondary--grey .icon {
+  margin-left: 8px;
+}
+.btn--secondary--grey:hover {
+  background-color: rgba(245, 240, 236, 0.2);
+}
+.btn--secondary--grey .icon::before {
+  color: #F5F0EC;
 }
 
 .title {
@@ -443,6 +460,13 @@ table {
   color: #F5F0EC;
 }
 
+.website {
+  background-color: #F5F0EC;
+}
+
+.header {
+  background-color: #fff;
+}
 .header .nav-link {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -498,7 +522,7 @@ table {
 }
 
 .big-wrapper {
-  background: var(--grey, #F5F0EC);
+  background: #F5F0EC;
   padding-top: 120px;
   padding-bottom: 160px;
 }
@@ -520,10 +544,13 @@ table {
 }
 .wrapper .card {
   padding: 48px 40px;
-  color: white;
   max-width: 378px;
   border: none;
   border-radius: 28px;
+  transition: 0.5s;
+}
+.wrapper .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .wrapper .card__content-box__title {
   font-family: "Montserrat", sans-serif;
@@ -546,21 +573,29 @@ table {
   height: 40px;
 }
 .wrapper .card__content-box__link {
-  color: var(--green, #1B5B31);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  border-bottom: 1px solid #1B5B31;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.wrapper .card__content-box__link__text {
+  color: #1B5B31;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  text-decoration: none;
-  text-align: left;
-  border-bottom: 1px solid var(--green, #1B5B31);
+}
+.wrapper .card__content-box__link .icon-arrow-btn-right {
+  margin-left: 8px;
 }
 
 .section-main {
   height: 720px;
-  background-color: var(--beige, #DCC1AB);
+  background-color: #DCC1AB;
 }
 .section-main__content {
   padding: 64px;
@@ -573,11 +608,12 @@ table {
   display: flex;
   gap: 36px;
 }
-.section-main__img {
-  background-image: url("../img/garden.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.section-main .slide {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
 }
 
 .about {
@@ -606,15 +642,15 @@ table {
   margin-bottom: 72px;
 }
 
+.projects {
+  background-color: #DCC1AB;
+}
 .projects__header {
-  margin-top: 120px;
-  margin-bottom: 96px;
+  padding-top: 120px;
+  padding-bottom: 96px;
   padding-left: 160px;
 }
 
-.instagram {
-  background-color: white;
-}
 .instagram__content {
   padding: 120px 110px;
   background-color: #1B5B31;
@@ -624,11 +660,11 @@ table {
 }
 
 .footer {
-  background-color: black;
+  background-color: #111;
   padding: 80px 256px;
 }
 .footer__info {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #F5F0EC;
   padding-bottom: 62px;
 }
 .footer__text {
@@ -638,7 +674,7 @@ table {
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.14px;
-  color: var(--grey, #F5F0EC);
+  color: #F5F0EC;
 }
 .footer__media {
   gap: 48px;
