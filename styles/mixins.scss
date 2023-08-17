@@ -5,31 +5,37 @@
 //BREAKPOINTS
 //
 @mixin xs {
-    @media (max-width: f.calculateRem(767px)) {
+    @media (max-width: f.calculateRem(576px)) {
         @content;
     }
 }
 
 @mixin sm {
-    @media (min-width: f.calculateRem(768px)) {
+    @media (min-width: f.calculateRem(576px)) {
         @content;
     }
 }
 
 @mixin md {
-    @media (min-width: f.calculateRem(1152px)) {
+    @media (min-width: f.calculateRem(768px)) {
         @content;
     }
 }
 
 @mixin lg {
-    @media (min-width: f.calculateRem(1400px)) {
+    @media (min-width: f.calculateRem(992px)) {
         @content;
     }
 }
 
 @mixin xl {
-    @media (min-width: f.calculateRem(1920px)) {
+    @media (min-width: f.calculateRem(1200px)) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: f.calculateRem(1400px)) {
         @content;
     }
 }

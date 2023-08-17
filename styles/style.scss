@@ -225,8 +225,11 @@
 }
 
 .section-main {
-    height: f.calculateRem(720px);
     background-color: v.$beige;
+
+    @include m.lg {
+        height: f.calculateRem(720px);
+    }
 
     &__content {
         padding: f.calculateRem(34px);
@@ -250,10 +253,14 @@
     }
 
     .slide {
-        width: 100%;
-        height: 100%;
+
+        height: 640px;
         object-fit: cover;
         overflow: hidden;
+
+        @include m.lg {
+            height: 100%;
+        }
     }
 
     .carousel {
@@ -262,34 +269,85 @@
 
     .carousel-control-prev {
         position: absolute;
-        top: 600;
-        left: 250;
+        width: 96px;
+        height: 96px;
+        background-color: v.$grey;
+        opacity: 1;
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
 
         @include m.lg {
-            left: 500;
+            transform: unset;
+            top: unset;
+            left: unset;
+            right: 96px;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: unset;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: "\e902";
+                font-size: 48px;
+                font-family: 'icomoon';
+            }
         }
     }
 
     .carousel-control-next {
         position: absolute;
-        top: 600;
-        left: 300;
+        width: 96px;
+        height: 96px;
+        background-color: v.$grey;
+        opacity: 1;
+        text-decoration: none;
+
+        top: 50%;
+        transform: translate(0, -50%);
 
         @include m.lg {
-            left: 600;
+            top: unset;
+            transform: unset;
+        }
+
+        .carousel-control-next-icon {
+            background-image: unset;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: "\e903";
+                font-size: 48px;
+                font-family: 'icomoon';
+            }
         }
     }
 }
 
 .about {
-    height: f.calculateRem(720px);
+    height: f.calculateRem(1000px);
     background-color: v.$green;
+
+    @include m.lg {
+        height: f.calculateRem(720px);
+    }
 
     &__photo {
         background-image: url('../img/japan_garden.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        height: f.calculateRem(500px);
     }
 
     &__content {
@@ -302,14 +360,28 @@
         }
 
         .title {
-            max-width: f.calculateRem(250px);
+
+            @include m.lg {
+                max-width: f.calculateRem(250px);
+            }
+
         }
 
         .text {
+            max-width: f.calculateRem(500px);
+
+            @include m.lg {
+                max-width: 100%;
+            }
+
             margin-bottom: f.calculateRem(72px);
         }
 
-        padding-left: f.calculateRem(96px);
+        padding-left: f.calculateRem(45px);
+
+        @include m.md {
+            padding-left: f.calculateRem(96px);
+        }
     }
 }
 
