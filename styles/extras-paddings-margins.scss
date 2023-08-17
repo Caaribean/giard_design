@@ -1,47 +1,7 @@
 @use "function.scss" as f;
 
-.mt-0 {
-    margin-top: f.calculateRem(0px) !important;
-}
-
-.mt-10 {
-    margin-top: f.calculateRem(10px) !important;
-}
-
-.mt-15 {
-    margin-top: f.calculateRem(15px) !important;
-}
-
-.mt-20 {
-    margin-top: f.calculateRem(20px) !important;
-}
-
-.mt-25 {
-    margin-top: f.calculateRem(25px) !important;
-}
-
-.mt-30 {
-    margin-top: f.calculateRem(30px) !important;
-}
-
-.mt-40 {
-    margin-top: f.calculateRem(40px) !important;
-}
-
-.mt-50 {
-    margin-top: f.calculateRem(50px) !important;
-}
-
 .mt-60 {
     margin-top: f.calculateRem(60px) !important;
-}
-
-.mt-70 {
-    margin-top: f.calculateRem(70px) !important;
-}
-
-.mt-80 {
-    margin-top: f.calculateRem(80px) !important;
 }
 
 .mt-90 {
@@ -60,18 +20,6 @@
     margin-bottom: f.calculateRem(10px) !important;
 }
 
-.mb-15 {
-    margin-bottom: f.calculateRem(15px) !important;
-}
-
-.mb-20 {
-    margin-bottom: f.calculateRem(20px) !important;
-}
-
-.mb-25 {
-    margin-bottom: f.calculateRem(25px) !important;
-}
-
 .mb-30 {
     margin-bottom: f.calculateRem(30px) !important;
 }
@@ -80,34 +28,6 @@
     margin-bottom: f.calculateRem(40px) !important;
 }
 
-.mb-50 {
-    margin-bottom: f.calculateRem(50px) !important;
-}
-
 .mb-60 {
     margin-bottom: f.calculateRem(60px) !important;
-}
-
-.mb-80 {
-    margin-bottom: f.calculateRem(80px) !important;
-}
-
-.pt-40 {
-    padding-top: f.calculateRem(40px) !important;
-}
-
-.pt-80 {
-    padding-top: f.calculateRem(80px) !important;
-}
-
-.pt-120 {
-    padding-top: f.calculateRem(120px) !important;
-}
-
-.pb-40 {
-    padding-bottom: f.calculateRem(40px) !important;
-}
-
-.pb-80 {
-    padding-bottom: f.calculateRem(80px) !important;
 }

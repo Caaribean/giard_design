@@ -108,9 +108,6 @@
             border: none;
             width: f.calculateRem(24px);
             height: f.calculateRem(24px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
             transition: 0.4s;
 
             &::after {
@@ -137,7 +134,109 @@
                 width: f.calculateRem(240px);
                 padding: 0 f.calculateRem(6px);
             }
+        }
+    }
+}
 
+.section-main {
+    background-color: v.$beige;
+
+    @include m.lg {
+        height: f.calculateRem(720px);
+    }
+
+    &__content {
+        padding: f.calculateRem(34px);
+
+        @include m.md {
+            padding: f.calculateRem(64px);
+        }
+
+        .text {
+            margin-bottom: f.calculateRem(70px);
+
+            @include m.md {
+                max-width: f.calculateRem(490px);
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: f.calculateRem(36px);
+        }
+    }
+
+    .slide {
+        height: f.calculateRem(640px);
+        object-fit: cover;
+        overflow: hidden;
+
+        @include m.lg {
+            height: 100%;
+        }
+    }
+
+    .carousel {
+        position: relative;
+    }
+
+    .carousel-control-prev {
+        position: absolute;
+        width: f.calculateRem(96px);
+        height: f.calculateRem(96px);
+        background-color: v.$grey;
+        opacity: 1;
+        text-decoration: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        @include m.lg {
+            transform: unset;
+            top: unset;
+            left: unset;
+            right: f.calculateRem(96px);
+        }
+
+        .carousel-control-prev-icon {
+            background-image: unset;
+            width: f.calculateRem(48px);
+            height: f.calculateRem(48px);
+
+            &::before {
+                content: "\e902";
+                font-size: 48px;
+                font-family: 'icomoon';
+            }
+        }
+    }
+
+    .carousel-control-next {
+        position: absolute;
+        width: f.calculateRem(96px);
+        height: f.calculateRem(96px);
+        background-color: v.$grey;
+        opacity: 1;
+        text-decoration: none;
+
+        top: 50%;
+        transform: translate(0, -50%);
+
+        @include m.lg {
+            top: unset;
+            transform: unset;
+        }
+
+        .carousel-control-next-icon {
+            background-image: unset;
+            width: f.calculateRem(48px);
+            height: f.calculateRem(48px);
+
+            &::before {
+                content: "\e903";
+                font-size: 48px;
+                font-family: 'icomoon';
+            }
         }
     }
 }
@@ -146,8 +245,6 @@
     background: v.$grey;
     padding-top: f.calculateRem(120px);
     padding-bottom: f.calculateRem(160px);
-
-    @include m.md {}
 }
 
 .section {
@@ -165,12 +262,19 @@
 
 .wrapper {
     padding: 0 f.calculateRem(88px);
-    display: flex;
 
     .gap {
         gap: f.calculateRem(20px);
 
-        @include m.md {
+        @include m.sm {
+            gap: f.calculateRem(36px);
+        }
+
+        @include m.lg {
+            gap: f.calculateRem(56px);
+        }
+
+        @include m.xl {
             gap: f.calculateRem(96px);
         }
     }
@@ -224,116 +328,6 @@
     }
 }
 
-.section-main {
-    background-color: v.$beige;
-
-    @include m.lg {
-        height: f.calculateRem(720px);
-    }
-
-    &__content {
-        padding: f.calculateRem(34px);
-
-        @include m.md {
-            padding: f.calculateRem(64px);
-        }
-
-        .text {
-            margin-bottom: f.calculateRem(70px);
-
-            @include m.md {
-                max-width: f.calculateRem(490px);
-            }
-        }
-
-        .buttons {
-            display: flex;
-            gap: f.calculateRem(36px);
-        }
-    }
-
-    .slide {
-
-        height: 640px;
-        object-fit: cover;
-        overflow: hidden;
-
-        @include m.lg {
-            height: 100%;
-        }
-    }
-
-    .carousel {
-        position: relative;
-    }
-
-    .carousel-control-prev {
-        position: absolute;
-        width: 96px;
-        height: 96px;
-        background-color: v.$grey;
-        opacity: 1;
-        text-decoration: none;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-
-        @include m.lg {
-            transform: unset;
-            top: unset;
-            left: unset;
-            right: 96px;
-        }
-
-        .carousel-control-prev-icon {
-            background-image: unset;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            &::before {
-                content: "\e902";
-                font-size: 48px;
-                font-family: 'icomoon';
-            }
-        }
-    }
-
-    .carousel-control-next {
-        position: absolute;
-        width: 96px;
-        height: 96px;
-        background-color: v.$grey;
-        opacity: 1;
-        text-decoration: none;
-
-        top: 50%;
-        transform: translate(0, -50%);
-
-        @include m.lg {
-            top: unset;
-            transform: unset;
-        }
-
-        .carousel-control-next-icon {
-            background-image: unset;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            &::before {
-                content: "\e903";
-                font-size: 48px;
-                font-family: 'icomoon';
-            }
-        }
-    }
-}
-
 .about {
     height: f.calculateRem(1000px);
     background-color: v.$green;
@@ -348,6 +342,10 @@
         background-position: center;
         background-size: cover;
         height: f.calculateRem(500px);
+
+        @include m.lg {
+            height: 100%;
+        }
     }
 
     &__content {
@@ -369,12 +367,11 @@
 
         .text {
             max-width: f.calculateRem(500px);
+            margin-bottom: f.calculateRem(72px);
 
             @include m.lg {
                 max-width: 100%;
             }
-
-            margin-bottom: f.calculateRem(72px);
         }
 
         padding-left: f.calculateRem(45px);
@@ -389,9 +386,32 @@
     background-color: v.$beige;
 
     &__header {
-        padding-top: f.calculateRem(120px);
-        padding-bottom: f.calculateRem(96px);
-        padding-left: f.calculateRem(160px);
+        padding-top: f.calculateRem(60px);
+        padding-bottom: f.calculateRem(46px);
+        padding-left: f.calculateRem(80px);
+
+        @include m.md {
+            padding-top: f.calculateRem(120px);
+            padding-bottom: f.calculateRem(96px);
+            padding-left: f.calculateRem(160px);
+        }
+    }
+}
+
+.grid {
+    margin: 0 auto;
+
+    .grid-item {
+        margin-bottom: f.calculateRem(10px);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .grid-sizer,
+    .grid-item {
+        width: 30%;
     }
 }
 
@@ -411,7 +431,6 @@
             @include m.md {
                 width: 20%;
             }
-
         }
     }
 }
@@ -420,7 +439,7 @@
     background-color: v.$black;
     padding: f.calculateRem(80px) f.calculateRem(100px);
 
-    @include m.md {
+    @include m.xl {
         padding: f.calculateRem(80px) f.calculateRem(256px);
     }
 
@@ -444,6 +463,10 @@
         @include m.md {
             gap: f.calculateRem(48px);
         }
+
+        .footer__text {
+            cursor: pointer;
+        }
     }
 
     &__contact {
@@ -452,27 +475,14 @@
         @include m.md {
             gap: f.calculateRem(48px);
         }
+
+        .footer__text {
+            cursor: pointer;
+        }
     }
 
     &__logo {
         width: f.calculateRem(113px);
         height: f.calculateRem(23px);
-    }
-}
-
-.grid {
-    margin: 0 auto;
-
-    .grid-item {
-        margin-bottom: f.calculateRem(10px);
-
-        img {
-            width: 100%;
-        }
-    }
-
-    .grid-sizer,
-    .grid-item {
-        width: 30%;
     }
 }

@@ -92,7 +92,7 @@
 @mixin medium-title-italic {
     color: v.$grey;
     font-family: v.$inter;
-    font-size: f.calculateRem(40px);
+    font-size: f.calculateRem(30px);
     font-style: italic;
     font-weight: 500;
     line-height: 120%;
